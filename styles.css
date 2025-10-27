@@ -1,1 +1,115 @@
 /*  your css code here. If applicable */
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #verification_heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        #verification_subtext {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .code-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .code {
+            width: 60px;
+            height: 70px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .code:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .code:valid {
+            border-color: #10b981;
+        }
+
+        .verify-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .verify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .verify-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            .code {
+                width: 50px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .code-container {
+                gap: 8px;
+            }
+
+            #verification_heading {
+                font-size: 26px;
+            }
+
+            #verification_subtext {
+                font-size: 14px;
+            }
+        }
