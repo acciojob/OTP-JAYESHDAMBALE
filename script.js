@@ -3,7 +3,7 @@
  const codes = document.querySelectorAll('.code');
 
         // Focus on first input on page load
-        //codes[0].focus();
+        codes[0].focus();
 
         codes.forEach((code, idx) => {
             code.addEventListener('keydown', (e) => {
